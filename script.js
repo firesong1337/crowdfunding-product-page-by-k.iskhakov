@@ -103,6 +103,7 @@ radioBtns.forEach(function(radio) { // поведение при нажатии 
 
         continueBtn.onclick = () => {
             pledgeVal += Number(inputVal.value);
+            progressBar.value += Number(inputVal.value);
             backersVal += 1;
             totalPledge.textContent = numberWithThousands(pledgeVal);
             backersAmount.textContent = numberWithThousands(backersVal);
@@ -116,12 +117,12 @@ radioBtns.forEach(function(radio) { // поведение при нажатии 
                     case (document.querySelector(".support.val75")): 
                         blackLeft -= 1;
                         itemsLeft.textContent = blackLeft;
-                        itemsLeftMainSecond.textContent = bambooLeft;
+                        itemsLeftMainSecond.textContent = blackLeft;
                         break;
                     case (document.querySelector(".support.val200")): 
                         mohoganyLeft -= 1;
                         itemsLeft.textContent = mohoganyLeft;
-                        itemsLeftMainThird.textContent = bambooLeft;
+                        itemsLeftMainThird.textContent = mohoganyLeft;
                         break;
                 }
             }
